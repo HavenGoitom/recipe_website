@@ -111,8 +111,9 @@ for the margin-left and for the font size to decrease as well. */
 
 /* the whole div the paragraph and title */
 .video-div{
+    padding: 20px;
     width:300px;
-    height: 200px;
+    height: 300px;
     border-radius: 12px;
     text-align: center;
 
