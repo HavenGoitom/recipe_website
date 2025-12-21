@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloom &amp; Bite</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+    
+    * {
+      scroll-behavior: smooth;
+    }
+    
+    .recipe-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .recipe-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-link {
+      transition: color 0.3s ease;
+    }
+    
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    
+    .video-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full w-full overflow-auto">
+  <div class="min-h-full w-full" style="background: linear-gradient(180deg, #fff5f7 0%, #ffffff 100%);"><!-- Header -->
+   <header id="header" class="w-full sticky top-0 z-50" style="background: rgba(255, 245, 247, 0.95); backdrop-filter: blur(10px); border-bottom: 2px solid #fce4ec;">
+    <div class="max-w-7xl mx-auto px-6 py-6">
+     <div class="flex items-center justify-between mb-4">
+      <div class="flex items-center gap-4">
+       <div class="w-16 h-16 rounded-full flex items-center justify-center text-4xl" style="background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);">
+        🌸
+       </div>
+       <div>
+        <h1 id="site-title" class="text-4xl font-bold" style="color: #d81b60;">Bloom &amp; Bite</h1>
+        <p id="welcome-text" class="text-lg" style="color: #8e24aa;">Welcome to Bloom &amp; Bite</p>
+       </div>
+      </div>
+     </div>
+     <nav class="flex gap-6 justify-center flex-wrap"><a href="#header" class="nav-link px-4 py-2 rounded-full font-medium text-base" style="background: #fce4ec; color: #d81b60;">Header</a> <a href="#main" class="nav-link px-4 py-2 rounded-full font-medium text-base" style="background: #f3e5f5; color: #8e24aa;">Main</a> <a href="#aside" class="nav-link px-4 py-2 rounded-full font-medium text-base" style="background: #e1f5fe; color: #0288d1;">Aside</a> <a href="#footer" class="nav-link px-4 py-2 rounded-full font-medium text-base" style="background: #fff3e0; color: #f57c00;">Footer</a>
+     </nav>
+    </div>
+   </header><!-- Main Content -->
+   <main id="main" class="max-w-7xl mx-auto px-6 py-12"><!-- Sweet Foods Section -->
+    <section class="mb-16">
+     <h2 id="sweet-title" class="text-3xl font-bold mb-8 text-center" style="color: #d81b60;">Sweet Foods</h2>
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Sweet Recipe 1 -->
+      <article class="recipe-card rounded-3xl overflow-hidden" style="background: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+       <div class="video-container">
+        <div class="video-placeholder">
+         🍰
+        </div>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold mb-3" style="color: #d81b60;">Strawberry Dream Cake</h3>
+        <p class="mb-4" style="color: #666; line-height: 1.6;">A light and fluffy strawberry cake topped with fresh cream and berries. Perfect for celebrations!</p>
+        <div class="grid grid-cols-2 gap-3 mb-3">
+         <div class="px-3 py-2 rounded-xl" style="background: #fce4ec;">
+          <p class="text-sm font-medium" style="color: #d81b60;">Calories: 320</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #fce4ec;">
+          <p class="text-sm font-medium" style="color: #d81b60;">Carbs: 45g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #fce4ec;">
+          <p class="text-sm font-medium" style="color: #d81b60;">Protein: 6g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #fce4ec;">
+          <p class="text-sm font-medium" style="color: #d81b60;">Fat: 12g</p>
+         </div>
+        </div>
+        <p class="text-sm" style="color: #999;">Published on November 7, 2025</p>
+       </div>
+      </article><!-- Sweet Recipe 2 -->
+      <article class="recipe-card rounded-3xl overflow-hidden" style="background: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+       <div class="video-container">
+        <div class="video-placeholder">
+         🍪
+        </div>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold mb-3" style="color: #d81b60;">Chocolate Chip Cookies</h3>
+        <p class="mb-4" style="color: #666; line-height: 1.6;">Classic homemade cookies with gooey chocolate chips. Crispy on the outside, soft on the inside.</p>
+        <div class="grid grid-cols-2 gap-3 mb-3">
+         <div class="px-3 py-2 rounded-xl" style="background: #fce4ec;">
+          <p class="text-sm font-medium" style="color: #d81b60;">Calories: 180</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #fce4ec;">
+          <p class="text-sm font-medium" style="color: #d81b60;">Carbs: 24g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #fce4ec;">
+          <p class="text-sm font-medium" style="color: #d81b60;">Protein: 3g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #fce4ec;">
+          <p class="text-sm font-medium" style="color: #d81b60;">Fat: 9g</p>
+         </div>
+        </div>
+        <p class="text-sm" style="color: #999;">Published on November 8, 2025</p>
+       </div>
+      </article><!-- Sweet Recipe 3 -->
+      <article class="recipe-card rounded-3xl overflow-hidden" style="background: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+       <div class="video-container">
+        <div class="video-placeholder">
+         🧁
+        </div>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold mb-3" style="color: #d81b60;">Vanilla Cupcakes</h3>
+        <p class="mb-4" style="color: #666; line-height: 1.6;">Delicate vanilla cupcakes with buttercream frosting. A timeless favorite for any occasion.</p>
+        <div class="grid grid-cols-2 gap-3 mb-3">
+         <div class="px-3 py-2 rounded-xl" style="background: #fce4ec;">
+          <p class="text-sm font-medium" style="color: #d81b60;">Calories: 240</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #fce4ec;">
+          <p class="text-sm font-medium" style="color: #d81b60;">Carbs: 32g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #fce4ec;">
+          <p class="text-sm font-medium" style="color: #d81b60;">Protein: 4g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #fce4ec;">
+          <p class="text-sm font-medium" style="color: #d81b60;">Fat: 11g</p>
+         </div>
+        </div>
+        <p class="text-sm" style="color: #999;">Published on November 9, 2025</p>
+       </div>
+      </article>
+     </div>
+    </section><!-- Savory Foods Section -->
+    <section class="mb-16">
+     <h2 id="savory-title" class="text-3xl font-bold mb-8 text-center" style="color: #8e24aa;">Savory Foods</h2>
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Savory Recipe 1 -->
+      <article class="recipe-card rounded-3xl overflow-hidden" style="background: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+       <div class="video-container" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1f5fe 100%);">
+        <div class="video-placeholder">
+         🍕
+        </div>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold mb-3" style="color: #8e24aa;">Margherita Pizza</h3>
+        <p class="mb-4" style="color: #666; line-height: 1.6;">Authentic Italian pizza with fresh mozzarella, tomatoes, and basil. Simple yet absolutely delicious.</p>
+        <div class="grid grid-cols-2 gap-3 mb-3">
+         <div class="px-3 py-2 rounded-xl" style="background: #f3e5f5;">
+          <p class="text-sm font-medium" style="color: #8e24aa;">Calories: 285</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #f3e5f5;">
+          <p class="text-sm font-medium" style="color: #8e24aa;">Carbs: 36g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #f3e5f5;">
+          <p class="text-sm font-medium" style="color: #8e24aa;">Protein: 12g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #f3e5f5;">
+          <p class="text-sm font-medium" style="color: #8e24aa;">Fat: 10g</p>
+         </div>
+        </div>
+        <p class="text-sm" style="color: #999;">Published on November 10, 2025</p>
+       </div>
+      </article><!-- Savory Recipe 2 -->
+      <article class="recipe-card rounded-3xl overflow-hidden" style="background: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+       <div class="video-container" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1f5fe 100%);">
+        <div class="video-placeholder">
+         🥗
+        </div>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold mb-3" style="color: #8e24aa;">Mediterranean Salad</h3>
+        <p class="mb-4" style="color: #666; line-height: 1.6;">Fresh greens with feta cheese, olives, and a tangy lemon vinaigrette. Healthy and refreshing!</p>
+        <div class="grid grid-cols-2 gap-3 mb-3">
+         <div class="px-3 py-2 rounded-xl" style="background: #f3e5f5;">
+          <p class="text-sm font-medium" style="color: #8e24aa;">Calories: 220</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #f3e5f5;">
+          <p class="text-sm font-medium" style="color: #8e24aa;">Carbs: 15g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #f3e5f5;">
+          <p class="text-sm font-medium" style="color: #8e24aa;">Protein: 8g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #f3e5f5;">
+          <p class="text-sm font-medium" style="color: #8e24aa;">Fat: 16g</p>
+         </div>
+        </div>
+        <p class="text-sm" style="color: #999;">Published on November 11, 2025</p>
+       </div>
+      </article><!-- Savory Recipe 3 -->
+      <article class="recipe-card rounded-3xl overflow-hidden" style="background: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+       <div class="video-container" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1f5fe 100%);">
+        <div class="video-placeholder">
+         🍝
+        </div>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold mb-3" style="color: #8e24aa;">Creamy Pasta Carbonara</h3>
+        <p class="mb-4" style="color: #666; line-height: 1.6;">Rich and creamy pasta with crispy bacon and parmesan. A comfort food classic everyone loves.</p>
+        <div class="grid grid-cols-2 gap-3 mb-3">
+         <div class="px-3 py-2 rounded-xl" style="background: #f3e5f5;">
+          <p class="text-sm font-medium" style="color: #8e24aa;">Calories: 450</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #f3e5f5;">
+          <p class="text-sm font-medium" style="color: #8e24aa;">Carbs: 52g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #f3e5f5;">
+          <p class="text-sm font-medium" style="color: #8e24aa;">Protein: 18g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #f3e5f5;">
+          <p class="text-sm font-medium" style="color: #8e24aa;">Fat: 20g</p>
+         </div>
+        </div>
+        <p class="text-sm" style="color: #999;">Published on November 12, 2025</p>
+       </div>
+      </article>
+     </div>
+    </section><!-- Entertainment Foods Section -->
+    <section class="mb-16">
+     <h2 id="entertainment-title" class="text-3xl font-bold mb-8 text-center" style="color: #0288d1;">Entertainment Foods</h2>
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><!-- Entertainment Recipe 1 -->
+      <article class="recipe-card rounded-3xl overflow-hidden" style="background: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+       <div class="video-container" style="background: linear-gradient(135deg, #e1f5fe 0%, #fff3e0 100%);">
+        <div class="video-placeholder">
+         🍿
+        </div>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold mb-3" style="color: #0288d1;">Gourmet Popcorn Bar</h3>
+        <p class="mb-4" style="color: #666; line-height: 1.6;">Create your own flavored popcorn station with caramel, cheese, and sweet options. Perfect for movie night!</p>
+        <div class="grid grid-cols-2 gap-3 mb-3">
+         <div class="px-3 py-2 rounded-xl" style="background: #e1f5fe;">
+          <p class="text-sm font-medium" style="color: #0288d1;">Calories: 150</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #e1f5fe;">
+          <p class="text-sm font-medium" style="color: #0288d1;">Carbs: 20g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #e1f5fe;">
+          <p class="text-sm font-medium" style="color: #0288d1;">Protein: 3g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #e1f5fe;">
+          <p class="text-sm font-medium" style="color: #0288d1;">Fat: 8g</p>
+         </div>
+        </div>
+        <p class="text-sm" style="color: #999;">Published on November 13, 2025</p>
+       </div>
+      </article><!-- Entertainment Recipe 2 -->
+      <article class="recipe-card rounded-3xl overflow-hidden" style="background: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+       <div class="video-container" style="background: linear-gradient(135deg, #e1f5fe 0%, #fff3e0 100%);">
+        <div class="video-placeholder">
+         🌮
+        </div>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold mb-3" style="color: #0288d1;">Mini Taco Bites</h3>
+        <p class="mb-4" style="color: #666; line-height: 1.6;">Bite-sized tacos perfect for parties. Crispy shells with seasoned beef, cheese, and fresh toppings.</p>
+        <div class="grid grid-cols-2 gap-3 mb-3">
+         <div class="px-3 py-2 rounded-xl" style="background: #e1f5fe;">
+          <p class="text-sm font-medium" style="color: #0288d1;">Calories: 190</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #e1f5fe;">
+          <p class="text-sm font-medium" style="color: #0288d1;">Carbs: 18g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #e1f5fe;">
+          <p class="text-sm font-medium" style="color: #0288d1;">Protein: 10g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #e1f5fe;">
+          <p class="text-sm font-medium" style="color: #0288d1;">Fat: 9g</p>
+         </div>
+        </div>
+        <p class="text-sm" style="color: #999;">Published on November 14, 2025</p>
+       </div>
+      </article><!-- Entertainment Recipe 3 -->
+      <article class="recipe-card rounded-3xl overflow-hidden" style="background: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+       <div class="video-container" style="background: linear-gradient(135deg, #e1f5fe 0%, #fff3e0 100%);">
+        <div class="video-placeholder">
+         🍢
+        </div>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold mb-3" style="color: #0288d1;">Rainbow Fruit Skewers</h3>
+        <p class="mb-4" style="color: #666; line-height: 1.6;">Colorful fruit kabobs arranged by color. A healthy and visually stunning party snack.</p>
+        <div class="grid grid-cols-2 gap-3 mb-3">
+         <div class="px-3 py-2 rounded-xl" style="background: #e1f5fe;">
+          <p class="text-sm font-medium" style="color: #0288d1;">Calories: 80</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #e1f5fe;">
+          <p class="text-sm font-medium" style="color: #0288d1;">Carbs: 20g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #e1f5fe;">
+          <p class="text-sm font-medium" style="color: #0288d1;">Protein: 1g</p>
+         </div>
+         <div class="px-3 py-2 rounded-xl" style="background: #e1f5fe;">
+          <p class="text-sm font-medium" style="color: #0288d1;">Fat: 0g</p>
+         </div>
+        </div>
+        <p class="text-sm" style="color: #999;">Published on November 15, 2025</p>
+       </div>
+      </article>
+     </div>
+    </section>
+   </main><!-- Aside (Sidebar) -->
+   <aside id="aside" class="w-full" style="background: linear-gradient(180deg, #ffffff 0%, #fff5f7 100%); border-top: 2px solid #fce4ec;">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+     <h2 id="sidebar-title" class="text-3xl font-bold mb-8 text-center" style="color: #f57c00;">Related Links</h2>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-6"><a href="https://www.allrecipes.com" target="_blank" rel="noopener noreferrer" class="block p-6 rounded-3xl transition-all hover:scale-105" style="background: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+       <div class="text-4xl mb-3">
+        📖
+       </div><h3 class="text-xl font-bold mb-2" style="color: #f57c00;">AllRecipes</h3><p style="color: #666;">Discover thousands of delicious recipes from home cooks.</p></a> <a href="https://www.foodnetwork.com" target="_blank" rel="noopener noreferrer" class="block p-6 rounded-3xl transition-all hover:scale-105" style="background: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+       <div class="text-4xl mb-3">
+        👨‍🍳
+       </div><h3 class="text-xl font-bold mb-2" style="color: #f57c00;">Food Network</h3><p style="color: #666;">Professional chef recipes and cooking shows online.</p></a> <a href="https://www.eatthismuch.com" target="_blank" rel="noopener noreferrer" class="block p-6 rounded-3xl transition-all hover:scale-105" style="background: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+       <div class="text-4xl mb-3">
+        📅
+       </div><h3 class="text-xl font-bold mb-2" style="color: #f57c00;">Eat This Much</h3><p style="color: #666;">Automatic meal planning based on your nutrition goals.</p></a>
+     </div>
+    </div>
+   </aside><!-- Footer -->
+   <footer id="footer" class="w-full" style="background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%); border-top: 2px solid #d81b60;">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div>
+       <h3 class="text-2xl font-bold mb-4" style="color: #d81b60;">Bloom &amp; Bite</h3>
+       <p id="footer-about" style="color: #666; line-height: 1.6;">Your destination for delicious recipes and culinary inspiration. From sweet treats to savory meals, we've got something for everyone!</p>
+      </div>
+      <div>
+       <h3 class="text-xl font-bold mb-4" style="color: #8e24aa;">Contact</h3>
+       <p class="mb-2" style="color: #666;"><span class="font-medium">Name:</span> <span id="contact-name">Haven Goitom</span></p>
+       <p style="color: #666;"><span class="font-medium">Email:</span> <span id="contact-email">havengoitom2@gmail.com</span></p>
+      </div>
+      <div>
+       <h3 class="text-xl font-bold mb-4" style="color: #0288d1;">Quick Links</h3>
+       <nav class="flex flex-col gap-2"><a href="#header" class="hover:underline" style="color: #666;">Home</a> <a href="#main" class="hover:underline" style="color: #666;">Recipes</a> <a href="#aside" class="hover:underline" style="color: #666;">Resources</a>
+       </nav>
+      </div>
+     </div>
+     <div class="text-center pt-8" style="border-top: 2px solid rgba(216, 27, 96, 0.2);">
+      <p style="color: #666;">© 2085 Bloom &amp; Bite. All rights reserved.</p>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      background_color: "#fff5f7",
+      card_background: "#ffffff",
+      sweet_color: "#d81b60",
+      savory_color: "#8e24aa",
+      entertainment_color: "#0288d1",
+      site_title: "Bloom & Bite",
+      welcome_text: "Welcome to Bloom & Bite",
+      sweet_title: "Sweet Foods",
+      savory_title: "Savory Foods",
+      entertainment_title: "Entertainment Foods",
+      sidebar_title: "Related Links",
+      footer_about: "Your destination for delicious recipes and culinary inspiration. From sweet treats to savory meals, we've got something for everyone!",
+      contact_name: "Haven Goitom",
+      contact_email: "havengoitom2@gmail.com",
+      font_family: "Quicksand",
+      font_size: 16
+    };
+
+    async function onConfigChange(config) {
+      const customFont = config.font_family || defaultConfig.font_family;
+      const baseSize = config.font_size || defaultConfig.font_size;
+      const baseFontStack = 'Arial, sans-serif';
+      
+      document.body.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      
+      document.getElementById('site-title').textContent = config.site_title || defaultConfig.site_title;
+      document.getElementById('site-title').style.fontSize = `${baseSize * 2}px`;
+      document.getElementById('site-title').style.color = config.sweet_color || defaultConfig.sweet_color;
+      
+      document.getElementById('welcome-text').textContent = config.welcome_text || defaultConfig.welcome_text;
+      document.getElementById('welcome-text').style.fontSize = `${baseSize * 1.125}px`;
+      document.getElementById('welcome-text').style.color = config.savory_color || defaultConfig.savory_color;
+      
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.style.fontSize = `${baseSize}px`;
+      });
+      
+      document.getElementById('sweet-title').textContent = config.sweet_title || defaultConfig.sweet_title;
+      document.getElementById('sweet-title').style.fontSize = `${baseSize * 1.875}px`;
+      document.getElementById('sweet-title').style.color = config.sweet_color || defaultConfig.sweet_color;
+      
+      document.getElementById('savory-title').textContent = config.savory_title || defaultConfig.savory_title;
+      document.getElementById('savory-title').style.fontSize = `${baseSize * 1.875}px`;
+      document.getElementById('savory-title').style.color = config.savory_color || defaultConfig.savory_color;
+      
+      document.getElementById('entertainment-title').textContent = config.entertainment_title || defaultConfig.entertainment_title;
+      document.getElementById('entertainment-title').style.fontSize = `${baseSize * 1.875}px`;
+      document.getElementById('entertainment-title').style.color = config.entertainment_color || defaultConfig.entertainment_color;
+      
+      document.getElementById('sidebar-title').textContent = config.sidebar_title || defaultConfig.sidebar_title;
+      document.getElementById('sidebar-title').style.fontSize = `${baseSize * 1.875}px`;
+      document.getElementById('sidebar-title').style.color = config.entertainment_color || defaultConfig.entertainment_color;
+      
+      document.getElementById('footer-about').textContent = config.footer_about || defaultConfig.footer_about;
+      document.getElementById('footer-about').style.fontSize = `${baseSize}px`;
+      
+      document.getElementById('contact-name').textContent = config.contact_name || defaultConfig.contact_name;
+      document.getElementById('contact-email').textContent = config.contact_email || defaultConfig.contact_email;
+      
+      document.querySelector('header').style.background = `rgba(255, 245, 247, 0.95)`;
+      document.querySelector('body > div').style.background = `linear-gradient(180deg, ${config.background_color || defaultConfig.background_color} 0%, ${config.card_background || defaultConfig.card_background} 100%)`;
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            {
+              get: () => config.background_color || defaultConfig.background_color,
+              set: (value) => {
+                config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            },
+            {
+              get: () => config.card_background || defaultConfig.card_background,
+              set: (value) => {
+                config.card_background = value;
+                window.elementSdk.setConfig({ card_background: value });
+              }
+            },
+            {
+              get: () => config.sweet_color || defaultConfig.sweet_color,
+              set: (value) => {
+                config.sweet_color = value;
+                window.elementSdk.setConfig({ sweet_color: value });
+              }
+            },
+            {
+              get: () => config.savory_color || defaultConfig.savory_color,
+              set: (value) => {
+                config.savory_color = value;
+                window.elementSdk.setConfig({ savory_color: value });
+              }
+            },
+            {
+              get: () => config.entertainment_color || defaultConfig.entertainment_color,
+              set: (value) => {
+                config.entertainment_color = value;
+                window.elementSdk.setConfig({ entertainment_color: value });
+              }
+            }
+          ],
+          borderables: [],
+          fontEditable: {
+            get: () => config.font_family || defaultConfig.font_family,
+            set: (value) => {
+              config.font_family = value;
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          },
+          fontSizeable: {
+            get: () => config.font_size || defaultConfig.font_size,
+            set: (value) => {
+              config.font_size = value;
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ["site_title", config.site_title || defaultConfig.site_title],
+          ["welcome_text", config.welcome_text || defaultConfig.welcome_text],
+          ["sweet_title", config.sweet_title || defaultConfig.sweet_title],
+          ["savory_title", config.savory_title || defaultConfig.savory_title],
+          ["entertainment_title", config.entertainment_title || defaultConfig.entertainment_title],
+          ["sidebar_title", config.sidebar_title || defaultConfig.sidebar_title],
+          ["footer_about", config.footer_about || defaultConfig.footer_about],
+          ["contact_name", config.contact_name || defaultConfig.contact_name],
+          ["contact_email", config.contact_email || defaultConfig.contact_email]
+        ])
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b0fd5a471fbd821',t:'MTc2NjI0MDk5NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
